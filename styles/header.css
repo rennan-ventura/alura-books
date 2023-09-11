@@ -3,6 +3,8 @@
     height: 24px;
     background-image: url(../assets/Menu.svg);
     display: inline-block;
+    background-repeat:no-repeat;
+    background-position: center;
     background-size: contain;
     
 }
@@ -17,4 +19,16 @@
 .container {
     display: flex;
     align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
 }
