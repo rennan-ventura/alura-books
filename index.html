@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/banner.css">
     <title>AluraBooks</title>
 </head>
 
@@ -55,9 +55,76 @@
 
         </section>
 
-    </main>
-    <footer></footer>
+        <section class="carrossel">
 
+            <h2 class="carrossel__titulo">Novos lançamentos</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./assets/books/ApacheKafka.svg" alt="Livro sobre apache e spring boot da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/books/Liderança.svg" alt="Livro sobre liderança em design da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/books/Javascript.svg" alt="Livro sobre javascript da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/books/Nodejs.svg" alt="Livro sobre nodejs da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/books/ReactNative.svg" alt="Livro sobre react native da alura books"></div>
+                <div class="swiper-slide"><img src="./assets/books/Angular.svg" alt="Livro sobre angular da alura books"></div>
+
+
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+
+            <div class="card">
+                <!-- 1° linha -->
+                <div class="card__descricao">
+                    <!-- 1° coluna -->
+                    <div class="descricao">
+                        <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                    </div>
+                    <!-- 2° coluna -->
+                    <img src="assets/Angular.svg" alt="Imagem do angular">
+
+                </div>
+
+                <!-- 2° linha -->
+                <div class="card__botoes">
+                    <!-- 1° coluna -->
+                    <ul class="botoes">
+                        <li class="botoes__item"><img src="assets/Favoritos.svg" alt="icone de favoritos"></li>
+                        <li class="botoes__item"><img src="assets/Compras.svg" alt="icone de compras"></li>
+                    </ul>
+                    <!-- 2° coluna -->
+                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+
+    </script>
 </body>
 
 </html>
